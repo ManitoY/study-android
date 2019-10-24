@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">study-android</string>
+    <string name="main_animation_name">Animation(动画)</string>
+    <string name="main_components_name">Components(四大组件)</string>
+    <string name="main_design_model_name">DesignModel(设计模式)</string>
+    <string name="main_framework_name">Framework(Android Framework)</string>
+    <string name="main_jet_pack_name">JetPack(Android JetPack)</string>
+    <string name="main_network_name">Network(网络相关)</string>
+    <string name="main_optimization_name">Optimization(Android 优化)</string>
+    <string name="main_process_name">Process(进程)</string>
+    <string name="main_storage_name">Storage(存储)</string>
+    <string name="main_thread_name">Thread(线程)</string>
+    <string name="main_tools_name">Tools(第三方)</string>
+    <string name="main_view_name">View(界面相关)</string>
 </resources>
