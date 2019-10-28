@@ -5,6 +5,10 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 
+/**
+ * Created by Yshen
+ * On 2019-10-25
+ */
 class SvgPath(private val path: Path, private val color: String) {
     fun drawInCanvas(canvas: Canvas?, paint: Paint) {
         paint.strokeWidth = 1f

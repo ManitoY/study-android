@@ -18,6 +18,10 @@ import com.yshen.study.tools.ToolsActivity
 import com.yshen.study.view.ViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Created by Yshen
+ * On 2019-10-24
+ */
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {

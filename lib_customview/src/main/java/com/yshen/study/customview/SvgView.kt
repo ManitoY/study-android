@@ -18,6 +18,8 @@ import kotlin.math.max
 import kotlin.math.min
 
 /**
+ * Created by Yshen
+ * On 2019-10-25
  * 将 SVG 文件读取后绘制在界面上
  * 功能一: 可处理 <Path>
  * 功能二: 可点击 Path 区域，并监听点击事件
