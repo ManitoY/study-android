@@ -51,6 +51,9 @@
             android:name=".thread.ThreadActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".thread.handler.HandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".tools.ToolsActivity"
             android:screenOrientation="portrait" />
         <activity
