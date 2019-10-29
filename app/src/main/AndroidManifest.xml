@@ -27,6 +27,9 @@
             android:name=".components.ComponentsActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".components.activity.ActivityActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".designmodel.DesignModelActivity"
             android:screenOrientation="portrait" />
         <activity
