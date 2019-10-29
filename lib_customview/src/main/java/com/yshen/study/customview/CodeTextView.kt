@@ -58,9 +58,14 @@ class CodeTextView : TextView {
         // 设置背景
         setBackgroundColor(Color.parseColor("#dfdfdf"))
         setTextColor(Color.parseColor("#000000"))
+        setLineSpacing(0f,1.2f)
         movementMethod = ScrollingMovementMethod.getInstance()
         setHorizontallyScrolling(true)
-        typeface = Typeface.createFromAsset(context.assets, "msyh.ttf")
+        setCodeText()
+    }
+
+    fun setCodeText(text: String?) {
+        this.text = text
         setCodeText()
     }
 

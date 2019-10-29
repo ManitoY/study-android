@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/quiz1"
+            style="@style/AppTitle" />
+
+        <TextView
+            android:id="@+id/answer1"
+            style="@style/AppContent" />
+
+        <com.yshen.study.customview.CodeTextView
+            android:id="@+id/code1"
+            style="@style/AppCode" />
+
+        <TextView
+            android:id="@+id/quiz2"
+            style="@style/AppTitle" />
+
+        <TextView
+            android:id="@+id/answer2"
+            style="@style/AppContent" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

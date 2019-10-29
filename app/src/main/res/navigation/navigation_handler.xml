@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_handler"
+    app:startDestination="@+id/theory_fragment">
+
+    <fragment
+        android:id="@+id/theory_fragment"
+        android:name="com.yshen.study.thread.handler.HandlerTheoryFragment"
+        tools:layout="@layout/fragment_handler_theory" >
+        <action android:id="@+id/action_quiz"
+            app:destination="@+id/quiz_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/quiz_fragment"
+        android:name="com.yshen.study.thread.handler.HandlerQuizFragment"
+        tools:layout="@layout/fragment_handler_quiz" >
+        <action
+            android:id="@+id/action_theory"
+            app:popUpTo="@+id/theory_fragment" />
+    </fragment>
+</navigation>
