@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_handler"
+    app:startDestination="@+id/handler_theory_fragment">
+
+    <fragment
+        android:id="@+id/handler_theory_fragment"
+        android:name="com.yshen.study.thread.handler.HandlerTheoryFragment"
+        tools:layout="@layout/layout_handler_theory" >
+        <action
+            android:id="@+id/handler_quiz_action"
+            app:destination="@+id/handler_quiz_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/handler_quiz_fragment"
+        android:name="com.yshen.study.thread.handler.HandlerQuizFragment"
+        tools:layout="@layout/layout_handler_quiz" >
+        <action
+            android:id="@+id/handler_theory_action"
+            app:popUpTo="@+id/handler_theory_fragment" />
+    </fragment>
+</navigation>

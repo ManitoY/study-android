@@ -7,6 +7,10 @@ import com.yshen.study.R
 import com.yshen.study.components.activity.ActivityActivity
 import kotlinx.android.synthetic.main.activity_components.*
 
+/**
+ * Created by Yshen
+ * On 2019-10-24
+ */
 class ComponentsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
