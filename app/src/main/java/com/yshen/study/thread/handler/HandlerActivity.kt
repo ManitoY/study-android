@@ -13,6 +13,6 @@ class HandlerActivity : BaseNavigationActivity() {
     override fun getFragmentId(): Int = R.id.fragment
 
     override fun afterViews() {
-        title = "Handler 机制"
+
     }
 }
