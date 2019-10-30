@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/activity_theory_fragment"
         android:name="com.yshen.study.components.activity.ActivityTheoryFragment"
-        tools:layout="@layout/fragment_base_theory">
+        tools:layout="@layout/layout_activity_theory">
         <action
             android:id="@+id/activity_theory_action"
             app:destination="@+id/activity_quiz_fragment" />
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/activity_quiz_fragment"
         android:name="com.yshen.study.components.activity.ActivityQuizFragment"
-        tools:layout="@layout/fragment_base_quiz">
+        tools:layout="@layout/layout_activity_quiz">
         <action
             android:id="@+id/activity_quiz_action"
             app:popUpTo="@+id/activity_theory_fragment" />
