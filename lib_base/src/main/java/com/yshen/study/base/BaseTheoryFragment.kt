@@ -9,7 +9,7 @@ import androidx.annotation.LayoutRes
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.yshen.study.customview.Animations
+import com.yshen.study.common.Animations
 import kotlinx.android.synthetic.main.fragment_base_theory.view.*
 
 /**

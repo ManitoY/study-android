@@ -1,4 +1,4 @@
-package com.yshen.study.view
+package com.yshen.study.show
 
 import android.annotation.TargetApi
 import android.content.Context
@@ -9,6 +9,7 @@ import android.text.Spanned
 import android.text.method.ScrollingMovementMethod
 import android.util.AttributeSet
 import android.widget.TextView
+import com.yshen.study.common.ScreenMatch
 
 /**
  * Created by Yshen

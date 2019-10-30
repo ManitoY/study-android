@@ -6,13 +6,16 @@
                                   _______|_______
                                  |               |
                               lib_base        lib_view
+                                 |_______ _______|
+                                         |
+                                     lib_common
 
 ## 注解
    BNA: BaseNavigationActivity
    BTF: BaseTheoryFragment
    BQF: BaseQuizFragment
 
-### -app
+### app
      |__animation(动画)
      |__components(四大组件)
         |__BNA_activity(Activity 组件)
@@ -30,20 +33,18 @@
      |__view(界面相关)
      |__app.gradle
         |__api project(':lib_base')
+        |__api project(':lib_view')
 
-### -lib_base(app 中可以下沉的父类、公共资源)
+### lib_base(app 中可以下沉的父类、公共资源)
      |__BaseNavigationActivity(纯导航界面)
      |__BaseQuizFragment(面试题)
      |__BaseTheoryFragment(理论知识)
      |__lib_base.gradle
-        |__api project(':lib_customview')
+        |__api project(':lib_common')
         |__api androidx.navigation
 
-### -lib_customview(自定义View、动画)
-     |__Animations(动画)
-        |__startShakeByPropertyAnim(面试题按钮动画-变大变小抖动动画)
+### lib_view(自定义View)
      |__CodeTextView(将文字处理成代码块)
-     |__ScreenMatch(屏幕适配)
      |__SvgView(Svg图片处理)
      |__styles.xml
         |__AppTitle(标题样式)
@@ -51,8 +52,15 @@
         |__AppContent(内容样式)
         |__AppCode(代码块样式)
         |__AppCase(按钮样式'面试题')
-     |__lib_customview.gradle
+     |__lib_view.gradle
+        |__api project(':lib_common')
+
+### lib_common(公共组件库)
+     |__Animations(动画)
+        |__startShakeByPropertyAnim(面试题按钮动画-变大变小抖动动画)
+     |__ScreenMatch(屏幕适配)
+        |__dp2px(dp 转化成 px)
+     |__lib_common.gradle
         |__api kotlin
-        |__api androidx.constraintlayout
         |__api androidx.appcompat
         |__api androidx.core
