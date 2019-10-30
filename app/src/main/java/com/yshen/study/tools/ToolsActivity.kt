@@ -1,17 +1,12 @@
 package com.yshen.study.tools
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.yshen.study.R
+import com.yshen.study.base.BaseActivity
 
-/**
- * Created by Yshen
- * On 2019-10-24
- */
-class ToolsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setTitle(R.string.main_tools_name)
-        setContentView(R.layout.activity_tools)
+class ToolsActivity : BaseActivity() {
+    override fun getLayoutId(): Int = R.layout.activity_tools
+
+    override fun afterViews() {
+
     }
 }
