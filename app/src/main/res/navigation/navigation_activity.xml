@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/activity_theory_fragment"
+    android:id="@+id/navigation_activity">
+    <fragment
+        android:id="@+id/activity_theory_fragment"
+        android:name="com.yshen.study.components.activity.ActivityTheoryFragment"
+        tools:layout="@layout/layout_activity_theory">
+        <action
+            android:id="@+id/activity_theory_action"
+            app:destination="@+id/activity_quiz_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/activity_quiz_fragment"
+        android:name="com.yshen.study.components.activity.ActivityQuizFragment"
+        tools:layout="@layout/layout_activity_quiz">
+        <action
+            android:id="@+id/activity_quiz_action"
+            app:popUpTo="@+id/activity_theory_fragment" />
+    </fragment>
+</navigation>
