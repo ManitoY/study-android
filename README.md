@@ -21,9 +21,6 @@
 ### app
      |__animation(动画)
      |__components(四大组件)
-        |__BNA_activity(Activity 组件)
-           |__BTF_theory(理论知识)
-           |__BQF_quiz(一些面试题)
      |__designmodel(设计模式)
      |__framework(Android Framework)
      |__jetpack(Android Jetpack)
