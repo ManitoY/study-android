@@ -29,9 +29,6 @@
      |__process(进程)
      |__storage(存储)
      |__thread(线程)
-        |__BNA_handler(Hanlder 机制)
-           |__BTF_theory(理论知识)
-           |__BQF_quiz(一些面试题)
      |__tools(第三方)
      |__view(界面相关)
      |__app.gradle
