@@ -28,13 +28,17 @@ abstract class BaseTheoryFragment : Fragment() {
 
     abstract fun getTheoryActionId(): Int
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        contentView = View.inflate(activity, getContentView(), null)
+        layout.scrollView.addView(contentView)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        contentView = View.inflate(activity, getContentView(), null)
-        layout.scrollView.addView(contentView)
         setCaseBtnClick()
         setCaseBtnAnim()
         setTextViewContent()
