@@ -1,13 +1,12 @@
 package com.yshen.study.thread
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.yshen.study.R
+import com.yshen.study.base.BaseActivity
 
-class ThreadActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setTitle(R.string.main_thread_name)
-        setContentView(R.layout.activity_thread)
+class ThreadActivity : BaseActivity() {
+    override fun getLayoutId(): Int = R.layout.activity_thread
+
+    override fun afterViews() {
+
     }
 }

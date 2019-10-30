@@ -16,9 +16,8 @@ import kotlinx.android.synthetic.main.fragment_base_theory.view.*
  * Created by Yshen
  * On 2019-10-29
  */
-abstract class BaseTheoryFragment : Fragment() {
+abstract class BaseTheoryFragment : BaseFragment() {
 
-    private val layout by lazy { View.inflate(activity, R.layout.fragment_base_theory, null) }
     protected var contentView: View? = null
 
     abstract fun setTextViewContent()
@@ -34,15 +33,12 @@ abstract class BaseTheoryFragment : Fragment() {
         layout.scrollView.addView(contentView)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun getLayoutId(): Int = R.layout.fragment_base_theory
+
+    override fun afterViews() {
         setCaseBtnClick()
         setCaseBtnAnim()
         setTextViewContent()
-        return layout
     }
 
     private fun setCaseBtnClick() {

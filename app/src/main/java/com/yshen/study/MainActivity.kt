@@ -1,10 +1,11 @@
 package com.yshen.study
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 import com.yshen.study.animation.AnimationActivity
+import com.yshen.study.base.BaseActivity
+import com.yshen.study.base.Constants
 import com.yshen.study.components.ComponentsActivity
 import com.yshen.study.designmodel.DesignModelActivity
 import com.yshen.study.framework.FrameworkActivity
@@ -18,12 +19,10 @@ import com.yshen.study.tools.ToolsActivity
 import com.yshen.study.view.ViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseActivity(), View.OnClickListener {
+    override fun getLayoutId(): Int = R.layout.activity_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setTitle(R.string.app_name)
-        setContentView(R.layout.activity_main)
+    override fun afterViews() {
         setButtonClickListener(this)
     }
 
@@ -44,7 +43,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         val intent = Intent()
-        when(v){
+        intent.putExtra(Constants.TITLE, (v as TextView).text)
+        when (v) {
             animationBtn -> intent.setClass(this, AnimationActivity::class.java)
             componentsBtn -> intent.setClass(this, ComponentsActivity::class.java)
             designModelBtn -> intent.setClass(this, DesignModelActivity::class.java)
