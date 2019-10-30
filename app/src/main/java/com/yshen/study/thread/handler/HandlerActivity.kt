@@ -1,21 +1,18 @@
 package com.yshen.study.thread.handler
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import com.yshen.study.R
+import com.yshen.study.base.BaseNavigationActivity
 
 /**
  * Created by Yshen
  * On 2019-10-28
  */
-class HandlerActivity : AppCompatActivity() {
+class HandlerActivity : BaseNavigationActivity() {
+    override fun getLayoutId(): Int = R.layout.activity_handler
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun getFragmentId(): Int = R.id.fragment
+
+    override fun afterViews() {
         title = "Handler 机制"
-        setContentView(R.layout.activity_handler)
     }
-
-    override fun onSupportNavigateUp(): Boolean = findNavController(R.id.fragment).navigateUp()
 }

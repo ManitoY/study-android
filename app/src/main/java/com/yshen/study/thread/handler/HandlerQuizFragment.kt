@@ -1,18 +1,16 @@
 package com.yshen.study.thread.handler
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.TextView
 import com.yshen.study.R
-import kotlinx.android.synthetic.main.fragment_handler_quiz.view.*
+import com.yshen.study.base.BaseQuizFragment
+import com.yshen.study.show.CodeTextView
 
 /**
  * Created by Yshen
  * On 2019-10-29
  */
-class HandlerQuizFragment : Fragment() {
+class HandlerQuizFragment : BaseQuizFragment() {
+
 
     companion object {
         private const val QUIZ_1 = "Android 为什么需要提供在某个具体的线程中执行任务这种功能呢？"
@@ -32,21 +30,13 @@ class HandlerQuizFragment : Fragment() {
         private const val ANSWER_2 = "这是因为 Android 的 UI 控件不是线程安全的，如果在多线程中并发访问可能会导致 UI 控件处于不可预期的状态。如果加上锁机制就会让 UI 访问的逻辑变得复杂；其次锁机制会降低 UI 访问的效率，因为锁机制会阻塞某些线程的执行。"
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = View.inflate(activity, R.layout.fragment_handler_quiz, null)
-        setTextViewContent(view)
-        return view
-    }
+    override fun getContentView(): Int = R.layout.layout_handler_quiz
 
-    private fun setTextViewContent(view: View) {
-        view.quiz1.text = QUIZ_1
-        view.answer1.text = ANSWER_1
-        view.code1.setCodeText(CODE_1)
-        view.quiz2.text = QUIZ_2
-        view.answer2.text = ANSWER_2
+    override fun setTextViewContent() {
+        contentView?.findViewById<TextView>(R.id.quiz1)?.text = QUIZ_1
+        contentView?.findViewById<TextView>(R.id.answer1)?.text = ANSWER_1
+        contentView?.findViewById<CodeTextView>(R.id.code1)?.setCodeText(CODE_1)
+        contentView?.findViewById<TextView>(R.id.quiz2)?.text = QUIZ_2
+        contentView?.findViewById<TextView>(R.id.answer2)?.text = ANSWER_2
     }
 }

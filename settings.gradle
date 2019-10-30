@@ -1,2 +1,2 @@
-include ':app', ':lib_customview'
+include ':app', ':lib_base', ':lib_show', ':lib_common',
 rootProject.name='study-android'

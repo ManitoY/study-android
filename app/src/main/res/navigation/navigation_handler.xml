@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_handler"
-    app:startDestination="@+id/theory_fragment">
+    app:startDestination="@+id/handler_theory_fragment">
 
     <fragment
-        android:id="@+id/theory_fragment"
+        android:id="@+id/handler_theory_fragment"
         android:name="com.yshen.study.thread.handler.HandlerTheoryFragment"
-        tools:layout="@layout/fragment_handler_theory" >
-        <action android:id="@+id/action_quiz"
-            app:destination="@+id/quiz_fragment"/>
+        tools:layout="@layout/layout_handler_theory" >
+        <action
+            android:id="@+id/handler_quiz_action"
+            app:destination="@+id/handler_quiz_fragment"/>
     </fragment>
 
     <fragment
-        android:id="@+id/quiz_fragment"
+        android:id="@+id/handler_quiz_fragment"
         android:name="com.yshen.study.thread.handler.HandlerQuizFragment"
-        tools:layout="@layout/fragment_handler_quiz" >
+        tools:layout="@layout/layout_handler_quiz" >
         <action
-            android:id="@+id/action_theory"
-            app:popUpTo="@+id/theory_fragment" />
+            android:id="@+id/handler_theory_action"
+            app:popUpTo="@+id/handler_theory_fragment" />
     </fragment>
 </navigation>
