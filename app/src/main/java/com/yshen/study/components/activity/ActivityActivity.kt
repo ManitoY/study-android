@@ -1,19 +1,20 @@
 package com.yshen.study.components.activity
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import com.yshen.study.R
+import com.yshen.study.base.BaseNavigationActivity
 
 /**
  * Created by Yshen
  * On 2019-10-29
  */
-class ActivityActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_activity)
+class ActivityActivity : BaseNavigationActivity() {
+
+    override fun getLayoutId(): Int = R.layout.activity_activity
+
+    override fun getFragmentId(): Int = R.id.fragment
+
+    override fun afterViews() {
+
     }
 
-    override fun onSupportNavigateUp(): Boolean = findNavController(R.id.fragment).navigateUp()
 }

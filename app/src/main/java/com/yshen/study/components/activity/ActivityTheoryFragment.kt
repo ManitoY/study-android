@@ -1,25 +1,18 @@
 package com.yshen.study.components.activity
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.yshen.study.R
+import com.yshen.study.base.BaseTheoryFragment
 
 /**
  * Created by Yshen
  * On 2019-10-29
  */
-class ActivityTheoryFragment : Fragment() {
+class ActivityTheoryFragment : BaseTheoryFragment() {
+    override fun getContentView(): Int = R.layout.layout_activity_theory
 
-    private val layout by lazy { View.inflate(activity, R.layout.fragment_activity_theory, null) }
+    override fun getTheoryActionId(): Int = R.id.activity_theory_action
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return layout
+    override fun setTextViewContent() {
+
     }
 }

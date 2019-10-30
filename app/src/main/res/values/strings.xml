@@ -12,4 +12,6 @@
     <string name="main_thread_name">Thread(线程)</string>
     <string name="main_tools_name">Tools(第三方)</string>
     <string name="main_view_name">View(界面相关)</string>
+    
+    <string name="components_activity_name">Activity 组件</string>
 </resources>
