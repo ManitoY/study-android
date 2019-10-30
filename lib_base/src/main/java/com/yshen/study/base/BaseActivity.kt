@@ -11,12 +11,13 @@ import androidx.appcompat.app.AppCompatActivity
 abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.title = intent.getStringExtra(Constants.TITLE) ?: resources.getString(R.string.app_name)
         setContentView(getLayoutId())
-        afterViews(intent.getStringExtra(Constants.TITLE))
+        afterViews()
     }
 
     @LayoutRes
     abstract fun getLayoutId(): Int
 
-    abstract fun afterViews(title: String?)
+    abstract fun afterViews()
 }
