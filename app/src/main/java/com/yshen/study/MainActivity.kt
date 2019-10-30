@@ -3,8 +3,10 @@ package com.yshen.study
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.yshen.study.animation.AnimationActivity
+import com.yshen.study.base.Constants
 import com.yshen.study.components.ComponentsActivity
 import com.yshen.study.designmodel.DesignModelActivity
 import com.yshen.study.framework.FrameworkActivity
@@ -44,19 +46,44 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         val intent = Intent()
-        when(v){
-            animationBtn -> intent.setClass(this, AnimationActivity::class.java)
-            componentsBtn -> intent.setClass(this, ComponentsActivity::class.java)
-            designModelBtn -> intent.setClass(this, DesignModelActivity::class.java)
-            frameworkBtn -> intent.setClass(this, FrameworkActivity::class.java)
-            jetPackBtn -> intent.setClass(this, JetPackActivity::class.java)
-            networkBtn -> intent.setClass(this, NetworkActivity::class.java)
-            optimizationBtn -> intent.setClass(this, OptimizationActivity::class.java)
-            processBtn -> intent.setClass(this, ProcessActivity::class.java)
-            storageBtn -> intent.setClass(this, StorageActivity::class.java)
-            threadBtn -> intent.setClass(this, ThreadActivity::class.java)
-            toolsBtn -> intent.setClass(this, ToolsActivity::class.java)
-            viewBtn -> intent.setClass(this, ViewActivity::class.java)
+        intent.putExtra(Constants.TITLE, (v as TextView).text)
+        when (v) {
+            animationBtn -> {
+                intent.setClass(this, AnimationActivity::class.java)
+            }
+            componentsBtn -> {
+                intent.setClass(this, ComponentsActivity::class.java)
+            }
+            designModelBtn -> {
+                intent.setClass(this, DesignModelActivity::class.java)
+            }
+            frameworkBtn -> {
+                intent.setClass(this, FrameworkActivity::class.java)
+            }
+            jetPackBtn -> {
+                intent.setClass(this, JetPackActivity::class.java)
+            }
+            networkBtn -> {
+                intent.setClass(this, NetworkActivity::class.java)
+            }
+            optimizationBtn -> {
+                intent.setClass(this, OptimizationActivity::class.java)
+            }
+            processBtn -> {
+                intent.setClass(this, ProcessActivity::class.java)
+            }
+            storageBtn -> {
+                intent.setClass(this, StorageActivity::class.java)
+            }
+            threadBtn -> {
+                intent.setClass(this, ThreadActivity::class.java)
+            }
+            toolsBtn -> {
+                intent.setClass(this, ToolsActivity::class.java)
+            }
+            viewBtn -> {
+                intent.setClass(this, ViewActivity::class.java)
+            }
         }
         startActivity(intent)
     }

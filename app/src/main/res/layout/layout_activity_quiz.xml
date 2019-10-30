@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/contentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
+
     <TextView
         android:id="@+id/quiz1"
-        style="@style/AppTitle"
-        />
+        style="@style/AppTitle" />
+
     <TextView
-        android:id="@+id/answer1"
-        style="@style/AppContent"
-        />
+        android:id="@+id/answerTitle1_1"
+        style="@style/AppTitle2" />
+
+    <TextView
+        android:id="@+id/answerContent1_1"
+        style="@style/AppContent" />
+
+    <TextView
+        android:id="@+id/answerTitle1_2"
+        style="@style/AppTitle2" />
+
+    <TextView
+        android:id="@+id/answerContent1_2"
+        style="@style/AppContent" />
+
+    <TextView
+        android:id="@+id/answerTitle1_3"
+        style="@style/AppTitle2" />
+
+    <TextView
+        android:id="@+id/answerContent1_3"
+        style="@style/AppContent" />
+
+    <TextView
+        android:id="@+id/answerTitle1_4"
+        style="@style/AppTitle2" />
+
+    <TextView
+        android:id="@+id/answerContent1_4"
+        style="@style/AppContent" />
+
+    <TextView
+        android:id="@+id/quiz2"
+        style="@style/AppTitle" />
+
+    <TextView
+        android:id="@+id/answer2"
+        style="@style/AppContent" />
 </LinearLayout>
