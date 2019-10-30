@@ -13,8 +13,8 @@ class ActivityActivity : BaseNavigationActivity() {
 
     override fun getFragmentId(): Int = R.id.fragment
 
-    override fun afterViews(title: String?) {
-        this.title = title
+    override fun afterViews() {
+
     }
 
 }
