@@ -33,10 +33,10 @@ class HandlerQuizFragment : BaseQuizFragment() {
     override fun getContentView(): Int = R.layout.layout_handler_quiz
 
     override fun setTextViewContent() {
-        contentView?.findViewById<TextView>(R.id.quiz1)?.text = QUIZ_1
-        contentView?.findViewById<TextView>(R.id.answer1)?.text = ANSWER_1
-        contentView?.findViewById<CodeTextView>(R.id.code1)?.setCodeText(CODE_1)
-        contentView?.findViewById<TextView>(R.id.quiz2)?.text = QUIZ_2
-        contentView?.findViewById<TextView>(R.id.answer2)?.text = ANSWER_2
+        getViewById<TextView>(R.id.quiz1)?.text = QUIZ_1
+        getViewById<TextView>(R.id.answer1)?.text = ANSWER_1
+        getViewById<CodeTextView>(R.id.code1)?.setCodeText(CODE_1)
+        getViewById<TextView>(R.id.quiz2)?.text = QUIZ_2
+        getViewById<TextView>(R.id.answer2)?.text = ANSWER_2
     }
 }
